@@ -5,38 +5,15 @@
     android:layout_height="match_parent"
     tools:context="com.app.vipin.taskcreator.ScreenSlidePageFragment">
 
-    <TextView style="?android:textAppearanceMedium"
-        android:padding="16dp"
-        android:lineSpacingMultiplier="1.2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <TextView
+        style="@style/pager_task_title"
         android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="30sp"
         android:text="HELLO"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
         android:id="@+id/pager_task_title" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        style="@style/pager_task_detail"
         android:text="Medium Text"
-        android:textSize="20sp"
-        android:textAlignment="center"
         android:id="@+id/pager_task_detail"
-        android:layout_below="@+id/pager_task_title"
-        android:layout_marginTop="35dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="132dp" />
+        android:layout_below="@+id/pager_task_title"/>
 </RelativeLayout>

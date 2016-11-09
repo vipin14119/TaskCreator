@@ -99,7 +99,7 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
         @Override
         public CharSequence getPageTitle(int position) {
             if (position >= 0){
-                return "TAB "+ position;
+                return "TASK "+ (position + 1);
             }
             return null;
         }
