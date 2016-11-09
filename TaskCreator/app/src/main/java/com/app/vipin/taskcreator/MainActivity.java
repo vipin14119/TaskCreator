@@ -3,7 +3,6 @@ package com.app.vipin.taskcreator;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -73,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         int open_index = recyclerView.getChildAdapterPosition(view);
         /*int open_index = mAdapter.item_position;*/
         Log.d(" VIPIN CASDA", open_index+" ============= ");
-        Intent intent = new Intent(MainActivity.this, ScreenSlidePagerActivity.class);
+        Intent intent = new Intent(MainActivity.this, ViewPagerActivity.class);
         intent.putExtra("open_index", open_index);
         startActivity(intent);
     }

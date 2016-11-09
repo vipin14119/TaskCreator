@@ -17,7 +17,7 @@ import android.view.View;
 
 import java.util.List;
 
-public class ScreenSlidePagerActivity extends FragmentActivity {
+public class ViewPagerActivity extends FragmentActivity {
     /**
      * The number of pages (wizard steps) to show in this demo.
      */
@@ -80,7 +80,7 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
         @Override
         public Fragment getItem(int position) {
             Task task = mtaskList.get(position);
-            ScreenSlidePageFragment screenSlidePageFragment = new ScreenSlidePageFragment();
+            TaskDetailPagerFragment screenSlidePageFragment = new TaskDetailPagerFragment();
             Bundle args = new Bundle();
             args.putInt("task_id", task.getId());
             args.putString("task_title", task.getTitle());

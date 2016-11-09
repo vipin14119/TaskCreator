@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ScreenSlidePagerActivity"
+        <activity android:name=".ViewPagerActivity"
             android:label="Screen Slide Pager Activity"
             android:parentActivityName=".MainActivity"
             android:uiOptions="splitActionBarWhenNarrow">

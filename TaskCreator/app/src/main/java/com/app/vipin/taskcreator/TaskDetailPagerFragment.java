@@ -15,11 +15,11 @@ import org.w3c.dom.Text;
 /**
  * Created by vipin on 8/11/16.
  */
-public class ScreenSlidePageFragment extends Fragment {
+public class TaskDetailPagerFragment extends Fragment {
 
     private TextView task_title, task_detail;
     private Bundle passedData;
-    public ScreenSlidePageFragment(){
+    public TaskDetailPagerFragment(){
     }
 
     @Override
