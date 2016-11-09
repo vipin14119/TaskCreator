@@ -15,13 +15,11 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title,detail;
-        public CheckBox status;
 
         public MyViewHolder(View view) {
             super(view);
             title = (TextView) view.findViewById(R.id.title);
             detail = (TextView) view.findViewById(R.id.detail);
-            /*status = (CheckBox) view.findViewById(R.id.status);*/
 
         }
     }
@@ -45,9 +43,6 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
 
         holder.title.setText(task.getTitle());
         holder.detail.setText(task.getDetail());
-        /*boolean status ;
-        status = task.getStatus() != 0;
-        holder.status.setChecked(status);*/
     }
 
     @Override

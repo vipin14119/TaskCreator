@@ -7,7 +7,6 @@ package com.app.vipin.taskcreator;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -59,54 +58,6 @@ public class DBHandler extends SQLiteOpenHelper {
         db.insert(TABLE_NAME, null, contentValues);
         db.close();
     }
-    public boolean deleteuser (String username)
-    {
-        SQLiteDatabase db = this.getReadableDatabase();
-        String query="delete from users where username='"+username+"'";
-        Cursor res =  db.rawQuery( query, null );
-        if(res.getCount() <= 0){
-            res.close();
-            return false;
-        }
-        res.close();
-        return true;
-    }
-    public boolean updateuser (String username,int points)
-    {
-        SQLiteDatabase db = this.getReadableDatabase();
-        String query="update users set score = '"+Integer.toString(points)+"'where username='"+username+"'";
-        Cursor res =  db.rawQuery( query, null );
-        if(res.getCount() <= 0){
-            res.close();
-            return false;
-        }
-        res.close();
-        return true;
-    }
-    public boolean checkforuser(String username){
-        SQLiteDatabase db = this.getReadableDatabase();
-        String query="select name from users where username='"+username+"'";
-        Cursor res =  db.rawQuery( query, null );
-        if(res.getCount() <= 0){
-            res.close();
-            return false;
-        }
-        res.close();
-        return true;
-
-    }
-    public boolean validateUser(String uname,String pass)
-    {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "select * from users where username='"+uname+"' and password='"+pass+"'", null );
-        if(res.getCount() <= 0){
-            res.close();
-            return false;
-        }
-        res.close();
-        return true;
-    }
-
     public ArrayList<Task> getTasks()
     {
         ArrayList<Task> arrayList = new ArrayList<>();
@@ -125,10 +76,5 @@ public class DBHandler extends SQLiteOpenHelper {
             while (cursor.moveToNext());
         }
         return arrayList;
-    }
-    public Cursor getCursor(){
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor =  db.rawQuery( "select * from "+TABLE_NAME, null );
-        return cursor;
     }
 }

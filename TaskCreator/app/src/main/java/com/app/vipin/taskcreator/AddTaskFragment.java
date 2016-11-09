@@ -2,7 +2,6 @@ package com.app.vipin.taskcreator;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -50,7 +49,7 @@ public class AddTaskFragment extends DialogFragment {
                 addTask();
             }
         });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 AddTaskFragment.this.getDialog().cancel();

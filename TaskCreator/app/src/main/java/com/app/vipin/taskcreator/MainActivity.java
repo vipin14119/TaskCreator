@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
     public void makePager(View view){
         int open_index = recyclerView.getChildAdapterPosition(view);
         /*int open_index = mAdapter.item_position;*/
-        Log.d(" VIPIN CASDA", open_index+" ============= ");
         Intent intent = new Intent(MainActivity.this, ViewPagerActivity.class);
         intent.putExtra("open_index", open_index);
         startActivity(intent);
