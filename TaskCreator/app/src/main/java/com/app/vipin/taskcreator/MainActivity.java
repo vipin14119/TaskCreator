@@ -70,6 +70,11 @@ public class MainActivity extends AppCompatActivity {
         taskList =  dbHandler.getTasks();
     }
     public void makePager(View view){
-        startActivity(new Intent(MainActivity.this, ScreenSlidePagerActivity.class));
+        int open_index = recyclerView.getChildAdapterPosition(view);
+        /*int open_index = mAdapter.item_position;*/
+        Log.d(" VIPIN CASDA", open_index+" ============= ");
+        Intent intent = new Intent(MainActivity.this, ScreenSlidePagerActivity.class);
+        intent.putExtra("open_index", open_index);
+        startActivity(intent);
     }
 }

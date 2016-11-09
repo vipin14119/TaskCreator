@@ -12,6 +12,7 @@ import java.util.List;
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> {
 
     private List<Task> taskList;
+    public int item_position;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title,detail;
@@ -42,6 +43,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Task task = taskList.get(position);
+        item_position = position;
 
         holder.title.setText(task.getTitle());
         holder.detail.setText(task.getDetail());

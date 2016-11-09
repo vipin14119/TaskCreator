@@ -30,6 +30,7 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
      * and next wizard steps.
      */
     private ViewPager mPager;
+    private int open_index;
 
     /**
      * The pager adapter, which provides the pages to the view pager widget.
@@ -45,6 +46,8 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
+        open_index = getIntent().getExtras().getInt("open_index");
+        mPager.setCurrentItem(open_index, true);
     }
 
     @Override

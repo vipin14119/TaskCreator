@@ -18,7 +18,14 @@ import org.w3c.dom.Text;
 public class ScreenSlidePageFragment extends Fragment {
 
     private TextView task_title, task_detail;
+    private Bundle passedData;
     public ScreenSlidePageFragment(){
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        passedData = getArguments();
     }
 
     @Override
@@ -27,6 +34,10 @@ public class ScreenSlidePageFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
                 R.layout.fragment_screen_slide_page, container, false);
 
+        task_title = (TextView) rootView.findViewById(R.id.pager_task_title);
+        task_detail = (TextView) rootView.findViewById(R.id.pager_task_detail);
+        task_title.setText(passedData.getString("task_title"));
+        task_detail.setText(passedData.getString("task_detail"));
 
         return rootView;
     }
@@ -37,9 +48,6 @@ public class ScreenSlidePageFragment extends Fragment {
 
         Bundle b = getArguments();
 
-        task_title = (TextView) getActivity().findViewById(R.id.pager_task_title);
-        task_detail = (TextView) getActivity().findViewById(R.id.pager_task_detail);
-        task_title.setText(b.getString("task_title"));
-        task_detail.setText(b.getString("task_detail"));
+
     }
 }
