@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="card_background" parent="@android:style/TextAppearance.Medium">
-        <item name="android:background">#c5caca</item>
+        <item name="android:background">#dee4e4</item>
     </style>
 
     <style name="card_title" parent="@android:style/TextAppearance.Medium">
