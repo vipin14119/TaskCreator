@@ -12,7 +12,6 @@ import java.util.List;
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> {
 
     private List<Task> taskList;
-    public int item_position;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title,detail;
@@ -22,7 +21,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
             super(view);
             title = (TextView) view.findViewById(R.id.title);
             detail = (TextView) view.findViewById(R.id.detail);
-            status = (CheckBox) view.findViewById(R.id.status);
+            /*status = (CheckBox) view.findViewById(R.id.status);*/
 
         }
     }
@@ -43,13 +42,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Task task = taskList.get(position);
-        item_position = position;
 
         holder.title.setText(task.getTitle());
         holder.detail.setText(task.getDetail());
-        boolean status ;
+        /*boolean status ;
         status = task.getStatus() != 0;
-        holder.status.setChecked(status);
+        holder.status.setChecked(status);*/
     }
 
     @Override
